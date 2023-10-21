@@ -1,0 +1,22 @@
+{
+  "name": "birthmark",
+  "version": "1.0.0",
+  "description": "automated card on birthday",
+  "main": "index.js",
+  "bin": {
+    "mark": "./bin/enc.js"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "SimchaJ",
+  "license": "ISC",
+  "dependencies": {
+    "cron": "^3.1.1",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.2",
+    "node-schedule": "^2.1.1",
+    "nodejs-nodemailer-outlook": "^1.2.4",
+    "nodemailer": "^6.9.6"
+  }
+}
