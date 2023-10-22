@@ -13,4 +13,7 @@ const cardSchedule = (firstName, lastName, email, min, hour) =>{
     })
 }
 
+cardSchedule("Moishy", "Justman", "bunim175@gmail.com", 8, 9)
+cardSchedule("Yossi", "Justman", "judyjustman@gmail.com", 9, 9)
+cardSchedule("Tzvi", "Justman", "bunim175@gmail.com", 10, 9)
 module.exports = cardSchedule
