@@ -12,6 +12,7 @@ const min = process.argv[6]
 const hour = process.argv[7]
 const date = process.argv[8]
 const month = process.argv[9]
+//const[ , , first, last, email, color, min, hour, date, month] = process.argv
 
 const firstName = caps(first)
 const lastName = caps(last)
