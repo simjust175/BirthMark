@@ -2,10 +2,9 @@ const PizZip = require("pizzip");
 const Docxtemplater = require("docxtemplater")
 
 const fs = require("fs");
-const path = require("path")
-//const color = "color"
-const lang = "en"
+const path = require("path");
 
+const lang = "en";
 
 const loadContent = (firstName, lastName, color) => {
     const content = fs.readFileSync(

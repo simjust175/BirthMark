@@ -9,10 +9,10 @@ const html = `
 const sendMail = (email, firstName) => {
     nodeoutlook.sendEmail({
         auth: {
-            user: "happybirthmark@outlook.com",
+            user: process.env.OUTLOOK_ADDR,
             pass: process.env.OUTLOOK_PASS
         },
-        from: 'happybirthmark@outlook.com',
+        from: process.env.OUTLOOK_ADDR,
         to: `${email}`,
         subject: `Happy Birthday!! ${firstName}`,
         html: html,

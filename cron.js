@@ -4,7 +4,7 @@ const card = require("./createCard");
 const mailTo = require("./mailTo")
 
 
-const cardSchedule = (firstName, lastName, email, color, min, hour, date= "*", month= "*") => {
+const cardSchedule = (firstName, lastName, email, color, min, hour, date, month) => {
     try {
         console.log(`Doc for ${firstName} will be created ${hour}:${min}`);
 
