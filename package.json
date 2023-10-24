@@ -2,7 +2,7 @@
   "name": "birthmark",
   "version": "1.0.0",
   "description": "automated card on birthday",
-  "main": "index.js",
+  "main": "cron.js",
   "bin": {
     "mark": "./bin/enc.js"
   },

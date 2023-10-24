@@ -4,7 +4,7 @@ require("dotenv").config()
 const html = `
 <h1> Happy Birthday!! </h1>
 <p> Sent using BirthMark</p>
-<img src="./assets/BirthMark.jpg" alt="BIRTHMARK">`
+<img src="./assets/logo/BirthMark.gif" alt="BIRTHMARK">`;
 
 const sendMail = (email, firstName) => {
     nodeoutlook.sendEmail({

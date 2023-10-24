@@ -8,7 +8,7 @@ const cardSchedule = (firstName, lastName, email, color, min, hour) => {
     try {
         cron.schedule(`${min} ${hour} * * *`, () => {
             card(firstName, lastName, color)
-            console.log(`i was called on: ${hour}:${min - 1}`);
+            console.log(`i was called on: ${hour}:${min}`);
         })
         min++
         cron.schedule(`${min} ${hour} * * *`, () => {

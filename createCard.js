@@ -9,7 +9,7 @@ const lang = "en"
 
 const loadContent = (firstName, lastName, color) => {
     const content = fs.readFileSync(
-        path.resolve(__dirname, `./templates/b-day_${color}_${lang}.docx`),
+        path.resolve(__dirname, `./assets/templates/b-day_${color}_${lang}.docx`),
         "binary"
     )
     const zip = new PizZip(content);
@@ -33,7 +33,5 @@ const renderCard = (firstName, lastName, color) => {
     fs.writeFileSync(path.resolve(outputPath, `happyB-day${firstName}.docx`), buf)
     console.log(`File for ${firstName} rendered`);
 }
-
-//renderCard("harry", "barry")
 
 module.exports = renderCard
