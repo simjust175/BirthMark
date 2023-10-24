@@ -3,7 +3,8 @@ require("dotenv").config()
 
 const html = `
 <h1> Happy Birthday!! </h1>
-<p> is nodemailer working alright?</p>`
+<p> Sent using BirthMark</p>
+<img src="./assets/BirthMark.jpg" alt="BIRTHMARK">`
 
 const sendMail = (email, firstName) => {
     nodeoutlook.sendEmail({
@@ -15,16 +16,17 @@ const sendMail = (email, firstName) => {
         to: `${email}`,
         subject: `Happy Birthday!! ${firstName}`,
         html: html,
-        text: 'This is text version!',
+        text: 'Happy Birthday!',
         attachments:[{
             filename: `happyB-day${firstName}.docx`,
             path: `./createdDocuments/happyB-day${firstName}.docx`
         }],
         onError: (err) => console.log(err),
-        onSuccess: (message) => console.log(message)
+        onSuccess: (message) => console.log(`Message successfuly sent: ${JSON.stringify(message.envelope)}`)
     }
     
     );
 }
 
 module.exports = sendMail
+

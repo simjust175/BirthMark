@@ -1,19 +1,26 @@
 const cron = require("node-cron");
-const card = require("./createDoc");
+
+const card = require("./createCard");
 const mailTo = require("./mailTo")
 
 const date = "23/23/23"
-const cardSchedule = (firstName, lastName, email, min, hour) =>{
-    cron.schedule(`${min} ${hour} * * *`, ()=>{
-        card(firstName, lastName, hour)
-        console.log(`i was called on: ${hour}:${min-1}`);
-    })
-    cron.schedule(`${min} ${hour} * * *`, ()=>{
-        mailTo(email, firstName)
-    })
+const cardSchedule = (firstName, lastName, email, color, min, hour) => {
+    try {
+        cron.schedule(`${min} ${hour} * * *`, () => {
+            card(firstName, lastName, color)
+            console.log(`i was called on: ${hour}:${min - 1}`);
+        })
+        min++
+        cron.schedule(`${min} ${hour} * * *`, () => {
+            mailTo(email, firstName)
+        })
+    } catch (err) {
+        console.error(err);
+    }
 }
 
-cardSchedule("Moishy", "Justman", "bunim175@gmail.com", 8, 9)
-cardSchedule("Yossi", "Justman", "judyjustman@gmail.com", 9, 9)
-cardSchedule("Tzvi", "Justman", "bunim175@gmail.com", 10, 9)
+cardSchedule("Rivi", "Justman", ["bunim175@gmail.com", "judyjustman@gmail.com"], "dog", 13, 11)
+// cardSchedule("Yossi", "Justman", "judyjustman@gmail.com", "black", 8, 10)
+// cardSchedule("Pini", "Justman", "bunim175@gmail.com", "gold", 10, 10)
+
 module.exports = cardSchedule
