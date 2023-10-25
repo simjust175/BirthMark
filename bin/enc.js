@@ -25,3 +25,13 @@ sendMultible = (userArray) => {
         console.log(user);
     });
 }
+
+// write in the terminal: mark then the first-name, last-name, email-address ,
+//color("gold", "dog", "colorful", "pink", or "black"), min(frpm 1-9 you just write the number 
+//for example for 09 write 9), hour(same as minute), date, month are OPTIONAL
+
+// כתוב בטרמינל: שם הפרטי, שם המשפחה, כתובת האימייל
+// צבע ("gold", "dog", "colorful", "pink" או "black")
+// (1-9 רק תכתוב את המספר - לדוגמה, ל-09 תכתוב 9), שעה (כמו אצל הדקה)ם,
+// תאריך, וחודש - הם אופציונליים
+// בסדר הזה"mark >> שעה << דקה << צבע << כתובת-אימייל << שם-משפחה << שם-פרטי
