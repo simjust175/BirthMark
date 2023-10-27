@@ -1,10 +1,12 @@
 const nodeoutlook = require("nodejs-nodemailer-outlook")
+const path = require("path")
 require("dotenv").config()
 
+const logoPath = path.join(__dirname, "./assets/logo/BirthMark.gif");
 const html = `
 <h1> Happy Birthday!! </h1>
 <p> Sent using BirthMark</p>
-<img src="./assets/logo/BirthMark.gif" alt="BIRTHMARK">`;
+<img src="${logoPath} alt="BIRTHMARK">`;
 
 const sendMail = (email, firstName) => {
     nodeoutlook.sendEmail({

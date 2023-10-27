@@ -10,8 +10,8 @@ const email = process.argv[4]
 const color = process.argv[5]
 const min = process.argv[6]
 const hour = process.argv[7]
-const date = process.argv[8]
-const month = process.argv[9]
+let date = process.argv[8]
+let month = process.argv[9]
 //const[ , , first, last, email, color, min, hour, date, month] = process.argv
 
 const firstName = caps(first)
@@ -32,6 +32,6 @@ sendMultible = (userArray) => {
 
 // כתוב בטרמינל: שם הפרטי, שם המשפחה, כתובת האימייל
 // צבע ("gold", "dog", "colorful", "pink" או "black")
-// (1-9 רק תכתוב את המספר - לדוגמה, ל-09 תכתוב 9), שעה (כמו אצל הדקה)ם,
+// ( רק תכתוב את המספר - לדוגמה, ל- תכתוב ), שעה (כמו אצל הדקה)ם,
 // תאריך, וחודש - הם אופציונליים
 // בסדר הזה"mark >> שעה << דקה << צבע << כתובת-אימייל << שם-משפחה << שם-פרטי
