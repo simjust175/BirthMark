@@ -1,0 +1,95 @@
+/*  >>>>>>>>>>>>>>>>>>>>>ADDED FROM INTERNET<<<<<<<<<<<<<<<<<   */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/sourcesanspro/v22/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf') format('truetype');
+}
+
+/* Variables */
+:root {
+  --background: #f8f8f8;
+  --button-gradient: #D8D9DB 0%, #fff 80%, #FDFDFD 100%;
+  --button-border: #8F9092;
+  --button-text: #606060;
+  --highlight-bottom: 0 4px 3px 1px #FCFCFC;
+  --shadow-bottom: 0 6px 8px #D6D7D9;
+  --shadow-top: 0 -4px 4px #CECFD1;
+  --highlight-top: 0 -6px 4px #FEFEFE;
+  --shadow-inset: inset 0 0 3px 0 #CECFD1;
+  --shadow-inset-hover: inset 0 0 3px 3px #CECFD1;
+  --shadow-inset-focus: inset 0 0 10px 0px rgba(0, 0, 250, .6);
+  --shadow-inset-active: inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+  --button-shadow-base: var(--highlight-bottom), var(--shadow-bottom), var(--shadow-top), var(--highlight-top);
+  --button-shadow-default: var(--button-shadow-base), var(--shadow-inset);
+  --button-shadow-hover: var(--button-shadow-base), var(--shadow-inset-hover);
+  --button-shadow-focus: var(--button-shadow-base), var(--shadow-inset-focus);
+  --button-shadow-active: var(--button-shadow-base), var(--shadow-inset-active);
+}
+
+/* Keyframes */
+@keyframes active {
+  from {
+    box-shadow: var(--button-shadow-focus);
+  }
+  to {
+    box-shadow: var(--button-shadow-hover);
+  }
+}
+
+/* Global Styles */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+  background: var(--background);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+button,
+[role="button"] {
+  -webkit-appearance: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image: linear-gradient(to top, var(--button-gradient));
+  border-radius: 30px;
+  border: 1px solid var(--button-border);
+  box-shadow: var(--button-shadow-default);
+  transition: all .2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--button-text);
+  text-shadow: 0 1px #fff;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+button > * {
+  transition: transform .2s ease;
+}
+
+button:focus:not(:active) {
+  animation: active .9s alternate infinite;
+  outline: none;
+}
+
+/*  >>>>>>>>>>>>>>>>>>>>>ADDED FROM INTERNET<<<<<<<<<<<<<<<<<   */

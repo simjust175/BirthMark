@@ -1,0 +1,32 @@
+{
+  "name": "birthmark",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "cron": "^3.1.6",
+    "docxtemplater": "^3.42.4",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.3",
+    "nodejs-nodemailer-outlook": "^1.2.4",
+    "pizzip": "^3.1.4",
+    "vue": "^3.3.4",
+    "vue-gapi": "^2.1.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.2.3",
+    "eslint": "^8.39.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "vite": "^4.3.9"
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "vite.config.js",
+  "author": "SimchajJ",
+  "license": "ISC"
+}
